@@ -14,4 +14,13 @@
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
     }
+
+    /*
+    - Move the cog closer to the edge
+    (The settings cog button for the entire page)
+    */
+    menu.personalizeButtonWrapper {
+        inset-block-end: 5px !important;
+        inset-inline-end: 5px !important;
+    }
 }
