@@ -214,4 +214,54 @@
         top: 7px !important;
         right: 7px !important;
     }
+
+    /*
+    - Move the menu further right
+    - Increase border radius
+    - Set the background to be the same as shorts
+    - Increase padding from all sides
+    (The highest container for the context menu)
+    */
+    span.context-menu {
+        margin-inline-start: 7px !important;
+        border-radius: 20px !important;
+        background: var(--CUSTOM-NEWTAB-COLOR-CONTEXT-BG) !important;
+        color: white !important;
+        padding: 4px 9px !important;
+    }
+
+    /*
+    - Padding between elements
+    (Containers for each option in the context menu)
+    */
+    li.context-menu-item {
+        border-radius: 10px !important;
+        overflow: hidden !important;
+    }
+
+    /*
+    - Change the background color on hovering over context menu options
+    */
+    li.context-menu-item:hover {
+        background: var(--CUSTOM-NEWTAB-COLOR-CONTEXT-HOVER-BG) !important;
+    }
+
+    /*
+    - Increase the width of the option
+    - Configure the text to be in the middle
+    (Text of the context menu options)
+    */
+    li.context-menu-item span {
+        height: 35px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /*
+    - Disable the lines
+    (Separator lines within the context menu)
+    */
+    span.context-menu li.separator {
+        display: none !important;
+    }
 }
