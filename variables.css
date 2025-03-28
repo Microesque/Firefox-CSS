@@ -1,0 +1,12 @@
+:root {
+    /* Chrome related */
+    --CUSTOM-CHROME-COLOR-MAIN-BG: #4D4D4D !important;
+    --CUSTOM-CHROME-COLOR-TOOLBAR-BG: #2B2B2B !important;
+    --CUSTOM-CHROME-COLOR-SEARCHBAR-BG: #0A0A0A !important;
+    --CUSTOM-CHROME-COLOR-TAB-TEXT: #FFFFFF !important;
+
+    /* Newtab related */
+    --CUSTOM-NEWTAB-URL-BGIMAGE: url('./images/NewtabBackground.png');
+    --CUSTOM-NEWTAB-COLOR-FALLBACK-BG1: var(--CUSTOM-CHROME-COLOR-MAIN-BG);
+    --CUSTOM-NEWTAB-COLOR-FALLBACK-BG2: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG);
+}
