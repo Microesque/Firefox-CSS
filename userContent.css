@@ -31,4 +31,51 @@
     div.body-wrapper.on>div:nth-child(2) {
         display: none !important;
     }
+
+    /*
+    - Remove the padding at the top, so lower elements can get flush
+    (Container for everything)
+    */
+    div.outer-wrapper {
+        padding-top: 0px !important;
+    }
+
+    /*
+    - Allign all elements to the very top
+    (Container for everything)
+    */
+    main.newtab-main {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+
+    /*
+    - Remove the padding at the top
+    (High level container around shorts)
+    */
+    section.collapsible-section.top-sites {
+        padding: 0px !important;
+    }
+
+    /*
+    - Make the elements flush with the top, and make them move away as the
+    page page gets larger
+    - Remove the hard-coded width so shorts allign properly
+    (The main container for the entire shorts)
+    */
+    div.body-wrapper.on {
+        position: relative !important;
+        top: max(0.5rem, calc(14% - 85px)) !important;
+        width: auto !important;
+    }
+
+    /*
+    - Remove the margin at the bottom
+    (High level container around shorts)
+    */
+    section.collapsible-section {
+        margin-bottom: 0px !important;
+    }
 }
