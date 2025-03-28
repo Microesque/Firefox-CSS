@@ -23,4 +23,12 @@
         inset-block-end: 5px !important;
         inset-inline-end: 5px !important;
     }
+
+    /*
+    - Remove evertything except shortcuts
+    */
+    div.non-collapsible-section,
+    div.body-wrapper.on>div:nth-child(2) {
+        display: none !important;
+    }
 }
