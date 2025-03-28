@@ -78,4 +78,140 @@
     section.collapsible-section {
         margin-bottom: 0px !important;
     }
+
+    /*
+    - Set the gap between shorts
+    (The main grid containing short elements)
+    */
+    ul.top-sites-list {
+        gap: 14px !important;
+    }
+
+    /*
+    - Remove the margin from the bottom
+    - Remove the calculated width and just match the content size
+    - Remove white background on hover
+    (Each top-site-outer is the highest short element container)
+    */
+    li.top-site-outer {
+        margin-block-end: 0px !important;
+        width: fit-content !important;
+        background: none !important;
+    }
+
+    /*
+    - Remove existing padding
+    - Change background to chrome toolbar
+    - Increase border radius
+    - Set the shorts width and height
+    (The actual short link to click)
+    */
+    a.top-site-button {
+        position: relative !important;
+        padding: 0px !important;
+        background: var(--CUSTOM-NEWTAB-COLOR-SHORTS-BG) !important;
+        border-radius: 23px !important;
+        width: 103px !important;
+        height: 103px !important;
+    }
+
+    /*
+    - Remove the outlines around elements that appear after clicking a short
+    */
+    a.top-site-button:focus * {
+        outline: none !important;
+    }
+
+    /*
+    - Push the icons toward the middle
+    - Remove the white background
+    - Remove the shadow around the icons
+    (Container for the icon of the short)
+    */
+    div.tile {
+        margin-top: 15px !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    /*
+    - Set icon sizes
+    - Remove the background
+    (Selector for all icons and their containers)
+    */
+    div.icon-wrapper,
+    div.icon-wrapper>div {
+        width: 40px !important;
+        height: 40px !important;
+        background-color: transparent !important;
+    }
+
+    /*
+    - Remove the placeholder icons entirely
+    */
+    div.tile>div::before {
+        content: none !important;
+    }
+
+    /*
+    - Limit the width to the contaier
+    - Set height to the container edge
+    - Force the text color to be tab-text
+    (Container for the text of the short)
+    */
+    div.title {
+        width: 100% !important;
+        height: 100% !important;
+        color: var(--CUSTOM-NEWTAB-COLOR-SHORTS-TEXT) !important;
+    }
+
+    /*
+    - Set the width to the container to center the text
+    - Pad to clear the text more from the sides
+    - For the text to always show two lines
+    (The text of the short)
+    */
+    span.title-label {
+        width: 100% !important;
+        padding: 0 13px !important;
+        text-wrap-mode: wrap !important;
+        -webkit-line-clamp: 2 !important;
+    }
+
+    /*
+    - Remove the pin icon shown before the short text
+    */
+    div.icon-pin-small {
+        display: none !important;
+    }
+
+    /*
+    - Make the + icon smaller
+    - Adjust the icon and the text to match other shorts
+    - Force the background image to be the same as text color
+    (Selector for the add short button specifically)
+    */
+    li.add-button div.icon-wrapper {
+        width: 25px !important;
+        height: 25px !important;
+        margin-top: 9px !important;
+        margin-bottom: 6px !important;
+        fill: var(--CUSTOM-NEWTAB-COLOR-SHORTS-TEXT) !important;
+    }
+
+    /*
+    Make all elements of the add short also turn the cursor a pointer, the same as other elements
+    */
+    li.add-button>div * {
+        cursor: pointer !important;
+    }
+
+    /*
+    - Position the button inside of the container
+    (Context menu button for the shorts)
+    */
+    button.context-menu-button.icon {
+        top: 7px !important;
+        right: 7px !important;
+    }
 }
