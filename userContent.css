@@ -428,4 +428,36 @@
     button.a11y-link-button.enable-custom-image-input {
         color: var(--CUSTOM-NEWTAB-COLOR-POPUP-BUTTON-BG2) !important;
     }
+
+    /*
+    
+    (Main settings containers)
+    */
+    div.customize-menu.customize-animate-enter-done,
+    div.customize-menu.customize-animate-enter-done>div.close-button-wrapper {
+        background: var(--CUSTOM-NEWTAB-COLOR-SETTINGS-BG) !important;
+    }
+
+    /*
+    (Main settings container all text)
+    */
+    div.customize-menu.customize-animate-enter-done * {
+        color: var(--CUSTOM-NEWTAB-COLOR-SETTINGS-TEXT) !important;
+    }
+
+    /*
+    (Main settings cog icon)
+    */
+    button#settings-link {
+        fill: var(--CUSTOM-NEWTAB-COLOR-SETTINGS-TEXT) !important;
+    }
+
+    select#row-selector {
+        background: var(--CUSTOM-NEWTAB-COLOR-SETTINGS-SELECT-BG) !important;
+        border: 2px solid var(--CUSTOM-NEWTAB-COLOR-SETTINGS-TEXT) !important;
+    }
+
+    select#row-selector>option {
+        background: var(--CUSTOM-NEWTAB-COLOR-SETTINGS-SELECT-BG) !important;
+    }
 }
