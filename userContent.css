@@ -147,7 +147,7 @@
     (The main grid containing short elements)
     */
     ul.top-sites-list {
-        gap: 14px !important;
+        gap: var(--CUSTOM-NEWTAB-SIZE-SHORTS-GAP) !important;
     }
 
     /*
@@ -174,8 +174,8 @@
         padding: 0px !important;
         background: var(--CUSTOM-NEWTAB-COLOR-SHORTS-BG) !important;
         border-radius: 23px !important;
-        width: 103px !important;
-        height: 103px !important;
+        width: var(--CUSTOM-NEWTAB-SIZE-SHORTS-CONTAINER) !important;
+        height: var(--CUSTOM-NEWTAB-SIZE-SHORTS-CONTAINER) !important;
     }
 
     /*
@@ -204,8 +204,8 @@
     */
     div.icon-wrapper,
     div.icon-wrapper>div {
-        width: 40px !important;
-        height: 40px !important;
+        width: var(--CUSTOM-NEWTAB-SIZE-SHORTS-ICON) !important;
+        height: var(--CUSTOM-NEWTAB-SIZE-SHORTS-ICON) !important;
         background-color: transparent !important;
     }
 
