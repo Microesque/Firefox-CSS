@@ -130,7 +130,7 @@
     */
     div.body-wrapper.on {
         position: relative !important;
-        top: max(0.5rem, calc(14% - 85px)) !important;
+        top: clamp(5px, 25px, 5vh) !important;
         width: auto !important;
     }
 
