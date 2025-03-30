@@ -9,7 +9,7 @@
         --color-accent-primary: var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) !important;
         --color-accent-primary-active: var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) !important;
         --in-content-button-background-active: color-mix(in srgb, var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) 21%, transparent) !important;
-        
+
         /* Content text */
         --in-content-page-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --button-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
@@ -326,5 +326,106 @@
     */
     span.context-menu li.separator {
         display: none !important;
+    }
+
+    /*
+    - Change background
+    (Add shortcut popup background)
+    */
+    div.modalOverlayOuter.active {
+        background: var(--CUSTOM-NEWTAB-COLOR-POPUP-OUTSIDE-BG) !important;
+    }
+
+    /*
+    - Change background
+    (Add shortcut popup)
+    */
+    div.modal {
+        background: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
+        border: 2px solid var(--CUSTOM-NEWTAB-COLOR-POPUP-BORDER) !important;
+    }
+
+    /*
+    - Change border
+    (Add shortcut popup bottom portion)
+    */
+    section.actions {
+        border-top: 2px solid var(--CUSTOM-NEWTAB-COLOR-POPUP-BORDER) !important;
+    }
+
+    /*
+    - Change background text
+    (Add shortcut popup text color)
+    */
+    div.modal h3,
+    div.modal span {
+        color: var(--CUSTOM-CHROME-COLOR-TAB-TEXT) !important;
+    }
+
+    /*
+    - Change background and text
+    - Remove outline on focus
+    (Add shortcut popup input boxes)
+    */
+    div.modal input {
+        background: var(--CUSTOM-NEWTAB-COLOR-POPUP-BOX-BG) !important;
+        border: 1px solid var(--CUSTOM-NEWTAB-COLOR-POPUP-BORDER) !important;
+        color: white !important;
+        outline: none !important;
+    }
+
+    div.modal input::selection {
+        background: var(--CUSTOM-NEWTAB-COLOR-POPUP-BOX-SELECT-BG) !important;
+        color: var(--CUSTOM-NEWTAB-COLOR-POPUP-BOX-SELECT-TEXT) !important;
+    }
+
+    /*
+    - Add new border
+    (Add shortcut popup preview container)
+    */
+    div.modal .top-site-inner {
+        border: 1px solid var(--CUSTOM-NEWTAB-COLOR-POPUP-BORDER) !important;
+        border-radius: 20px !important;
+    }
+
+    /*
+    - Remove white preview border
+    (Add shortcut popup preview)
+    */
+    div.modal .tile {
+        border: none !important;
+    }
+
+    /*
+    - Change background and text
+    - Remove border
+    - Remove the halo on hover
+    (Add shortcut popup buttons)
+    */
+    div.modal button:not(.a11y-link-button.enable-custom-image-input) {
+        background: var(--CUSTOM-NEWTAB-COLOR-POPUP-BUTTON-BG1) !important;
+        color: var(--CUSTOM-NEWTAB-COLOR-POPUP-BUTTON-TEXT) !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    div.modal button:not(.a11y-link-button.enable-custom-image-input):hover {
+        background: hsl(from var(--CUSTOM-NEWTAB-COLOR-POPUP-BUTTON-BG1) h s calc(l + 15)) !important;
+    }
+
+    /*
+    - Remove the buttons
+    (Add shortcut popup clear box buttons)
+    */
+    button.icon.icon-clear-input.icon-button-style {
+        display: none !important;
+    }
+
+    /*
+    
+    (Add shortcut popup buttons that look like links)
+    */
+    button.a11y-link-button.enable-custom-image-input {
+        color: var(--CUSTOM-NEWTAB-COLOR-POPUP-BUTTON-BG2) !important;
     }
 }
