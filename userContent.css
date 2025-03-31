@@ -229,6 +229,7 @@
         border-radius: 23px !important;
         width: var(--CUSTOM-NEWTAB-SIZE-SHORTS-CONTAINER) !important;
         height: var(--CUSTOM-NEWTAB-SIZE-SHORTS-CONTAINER) !important;
+        overflow: hidden !important;
     }
 
     /*
