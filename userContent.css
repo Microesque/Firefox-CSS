@@ -10,7 +10,7 @@
         --color-accent-primary-active: var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) !important;
         --in-content-button-background-active: color-mix(in srgb, var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) 21%, transparent) !important;
 
-        /* Content text */
+        /* Content */
         --in-content-page-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --text-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --button-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
@@ -19,8 +19,10 @@
 
         /* Input boxes */
         --background-color-box: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
-        --border-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
         --in-content-box-info-background: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
+
+        /* Borders */
+        --border-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
         --in-content-box-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 10)) !important;
         --in-content-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 10)) !important;
         --in-content-table-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 35)) !important;
