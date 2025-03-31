@@ -261,6 +261,7 @@
         width: var(--CUSTOM-NEWTAB-SIZE-SHORTS-ICON) !important;
         height: var(--CUSTOM-NEWTAB-SIZE-SHORTS-ICON) !important;
         background-color: transparent !important;
+        color-scheme: none !important;
     }
 
     /*
