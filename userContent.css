@@ -12,7 +12,6 @@
 
         /* Content text */
         --in-content-page-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
-        --in-content-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --text-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --button-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
@@ -23,12 +22,21 @@
         --border-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
         --in-content-box-info-background: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
         --in-content-box-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 10)) !important;
-        --in-content-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 35)) !important;
+        --in-content-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 10)) !important;
+        --in-content-table-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 35)) !important;
 
         /* FF link buttons */
         --in-content-primary-button-background: var(--CUSTOM-ABOUT-COLOR-BUTTON-FF-BG) !important;
         --in-content-primary-button-background-hover: hsl(from var(--CUSTOM-ABOUT-COLOR-BUTTON-FF-BG) calc(h + 10) s l) !important;
         --in-content-primary-button-background-active: hsl(from var(--CUSTOM-ABOUT-COLOR-BUTTON-FF-BG) calc(h + 10) s l) !important;
+
+        /* Tables */
+        --in-content-table-header-background: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
+        --in-content-table-background: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) h s calc(l + 5)) !important;
+        --in-content-table-header-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
+        --in-content-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
+        --table-row-background-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
+        --table-row-background-color-alternate: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) h s calc(l + 5)) !important;
     }
 
     :root,
