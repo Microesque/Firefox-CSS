@@ -12,13 +12,18 @@
 
         /* Content text */
         --in-content-page-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
+        --in-content-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
+        --text-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         --button-text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
+        --text-color: var(--CUSTOM-ABOUT-COLOR-CONTENT-TEXT) !important;
         ---in-content-button-background-active: var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) !important;
 
         /* Input boxes */
         --background-color-box: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
+        --border-color-deemphasized: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
         --in-content-box-info-background: var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) !important;
-        --in-content-box-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BOX-BG) h s calc(l - 45)) !important;
+        --in-content-box-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 10)) !important;
+        --in-content-border-color: hsl(from var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) h s calc(l + 35)) !important;
 
         /* FF link buttons */
         --in-content-primary-button-background: var(--CUSTOM-ABOUT-COLOR-BUTTON-FF-BG) !important;
@@ -34,7 +39,7 @@
     }
 }
 
-/* ----------------------------- Preferences ----------------------------- */
+/* ------------------------------- Preferences ------------------------------ */
 @-moz-document url-prefix(about:preferences) {
 
     /*
@@ -58,12 +63,50 @@
     - Change cursor to pointer
     (Blue buttons used to direct to other urls)
     */
-    .primary.small-button {
+    button.primary.small-button {
         cursor: pointer !important;
     }
 }
 
-/* ----------------------------- Newtab ----------------------------- */
+/* --------------------------------- Addons --------------------------------- */
+@-moz-document url-prefix(about:addons) {
+
+    /*
+    - Change content to a different color than the sidebar
+    (Highest content containers)
+    */
+    div#content,
+    div.sticky-container,
+    div.sticky-container>div {
+        background: var(--CUSTOM-ABOUT-COLOR-CONTENT-BG) !important;
+    }
+
+    /*
+    - Add division between sidebar and content
+    (Highest sidebar container)
+    */
+    div#sidebar {
+        border-right: 1px solid black !important;
+    }
+
+    /*
+    - Change cursor to pointer
+    (Blue buttons used to direct to other urls)
+    */
+    button.primary {
+        cursor: pointer !important;
+    }
+
+    div.card.addon {
+        box-shadow: none !important;
+    }
+
+    div.card.addon:hover {
+        box-shadow: 0 0 0 5px var(--CUSTOM-ABOUT-COLOR-SIDEBAR-BUTTON-TEXT) !important;
+    }
+}
+
+/* --------------------------------- Newtab --------------------------------- */
 @-moz-document url-prefix(about:home), url-prefix(about:newtab) {
 
     /*
