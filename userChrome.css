@@ -1,1 +1,146 @@
 @import url(variables.css);
+
+:root,
+:root * {
+    /* Main BG */
+    --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-MAIN-BG) !important;
+    --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-MAIN-BG) !important;
+
+    /* Toolbar & Bookmarks BG */
+    --toolbar-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
+
+    /* Border below the toolbar color */
+    --chrome-content-separator-color: var(--CUSTOM-CHROME-COLOR-MAIN-BG) !important;
+
+    /* Icons color */
+    --toolbarbutton-icon-fill: white !important;
+
+    /* Browser buttons color */
+    --toolbox-textcolor: white !important;
+    --toolbox-textcolor-inactive: white !important;
+
+    /* Toolbars text color */
+    --toolbar-color: var(--CUSTOM-CHROME-COLOR-TAB-TEXT) !important;
+}
+
+/* ================================= URLBAR ================================= */
+:root,
+:root * {
+    /*
+    - BG color of urlbar
+    - BG color of urlbar menu
+    - BG color of urlbar menu items when hovering
+    - BG color of urlbar menu items when selected
+
+    - TX color of urlbar ("serach with...")
+    - TX color of urlbar menu items
+    - TX color of urlbar menu links
+    - TX color of urlbar menu items when selected
+
+    - BG color of boxes2 (... right side of menu items)
+    - BG color of boxes2 when hovering
+    - TX color of boxes2
+    - TX color of boxes2 when hovering
+
+    - Outline color of urlbar
+   */
+    --toolbar-field-background-color: var(--CUSTOM-CHROME-COLOR-URLBAR-BG) !important;
+    --toolbar-field-focus-background-color: var(--toolbar-field-background-color) !important;
+    --urlbarView-hover-background: var(--CUSTOM-CHROME-COLOR-URLBAR-HOVER-BG) !important;
+    --urlbarView-highlight-background: var(--CUSTOM-CHROME-COLOR-URLBAR-SELECT-BG) !important;
+
+    --toolbar-field-color: var(--CUSTOM-CHROME-COLOR-URLBAR-TEXT) !important;
+    --toolbar-field-focus-color: var(--toolbar-field-color) !important;
+    --link-color: var(--CUSTOM-CHROME-COLOR-URLBAR-LINK-TEXT) !important;
+    --urlbarView-highlight-color: var(--CUSTOM-CHROME-COLOR-URLBAR-SELECT-TEXT) !important;
+
+    --urlbarView-result-button-selected-background-color: var(--CUSTOM-CHROME-COLOR-URLBAR-BG) !important;
+    --urlbarView-result-button-hover-background-color: var(--CUSTOM-CHROME-COLOR-URLBAR-BG) !important;
+    --urlbarView-result-button-selected-color: var(--CUSTOM-CHROME-COLOR-URLBAR-TEXT) !important;
+    --urlbarView-result-button-hover-color: var(--CUSTOM-CHROME-COLOR-URLBAR-TEXT) !important;
+
+    --focus-outline-color: var(--CUSTOM-CHROME-COLOR-URLBAR-OUTLINE) !important;
+}
+
+/*
+- Remove all backgrounds
+- Turn clickable are into a circle
+- Change cursor to clickable
+(Urlbar boxes (permissions, bookmarked, zoom etc.)
+*/
+#urlbar-go-button,
+#page-action-buttons>hbox,
+#urlbar-zoom-button,
+hbox.urlbar-input-container>box:not(#identity-box),
+hbox.urlbar-input-container>box>box {
+    background: none !important;
+    border-radius: 999px !important;
+    cursor: pointer !important;
+}
+
+/*
+- Change cursor to clickable
+(Urlbar menu items ... icon)
+*/
+span.urlbarView-button.urlbarView-button-menu {
+    cursor: pointer !important;
+}
+
+/*
+- Make selected item text bold
+(Urlbar menu selected item)
+*/
+span[aria-selected='true']>span {
+    font-weight: bold !important;
+}
+
+
+/*
+- Increase border radius
+(Urlbar)
+*/
+hbox.urlbar-input-container {
+    border-radius: 13px !important;
+}
+
+/* 
+- Make the text more visible
+(Urlbar placeholder text)
+*/
+hbox.urlbar-input-container *::placeholder {
+    color: color-mix(in srgb, currentColor 70%, transparent) !important;
+}
+
+/* 
+- Make the color match the placeholder text
+(Urlbar search icon)
+*/
+#identity-box {
+    fill-opacity: 0.5 !important;
+}
+
+/*
+- Make the pin icons match the text color
+(Urlbar menu items pin icon)
+*/
+span.urlbarView-type-icon {
+    fill: var(--CUSTOM-CHROME-COLOR-URLBAR-TEXT) !important;
+}
+
+/*
+- Remove the borders
+- Increase border radius to match the original urlbar
+(Urlbar dropdown menu)
+*/
+#urlbar-background {
+    border: none !important;
+    border-radius: 13px !important;
+}
+
+/*
+- Remove the top border
+(Urlbar dropdown menu container)
+*/
+div.urlbarView-body-inner {
+    border: none !important;
+}
