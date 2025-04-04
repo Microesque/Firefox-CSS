@@ -50,7 +50,6 @@ browser {
     --tab-selected-outline-color: none !important;
     --tab-selected-shadow: none !important;
 
-
     --toolbarbutton-inner-padding: 7px !important;
 }
 
@@ -161,6 +160,22 @@ label.tab-group-label {
     background-color: var(--tab-group-color-invert) !important;
     color: var(--tab-group-label-text-dark) !important;
     outline: none !important;
+}
+
+/*
+- Change text color
+(Tab container for the selected tab)
+*/
+tab.tabbrowser-tab[selected] * {
+    color: var(--CUSTOM-CHROME-COLOR-TABS-SELECT-TEXT) !important;
+}
+
+/*
+- Change text color
+(Tab container for the non-selected tabs)
+*/
+tab.tabbrowser-tab:not([selected]) * {
+    color: var(--CUSTOM-CHROME-COLOR-TABS-TEXT) !important;
 }
 
 /*
