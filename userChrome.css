@@ -137,14 +137,12 @@ tab.tabbrowser-tab {
 
 /*
 - Remove existing margin
-- Add margin at the top
 - Change border radius
 (Tab background and container)
 */
 vbox.tab-background,
 hbox.tab-content {
     margin: 0px !important;
-    margin-top: 3px !important;
     border-radius: var(--CUSTOM-CHROME-SIZE-TABS-BORDER-RADIUS) !important;
 }
 
@@ -156,6 +154,14 @@ tab.tabbrowser-tab[selected] vbox.tab-background,
 tab.tabbrowser-tab[selected] hbox.tab-content {
     border-bottom-left-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
+}
+
+/*
+- Add border for the selected tabs
+(Multi-selected tab background)
+*/
+tab.tabbrowser-tab[multiselected] vbox.tab-background {
+    border: var(--CUSTOM-CHROME-BORDER-TABS-MULTISELECT) !important;
 }
 
 /*
