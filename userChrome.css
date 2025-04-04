@@ -62,7 +62,7 @@ browser {
 (Container for the whole chrome)
 */
 #navigator-toolbox {
-    border-bottom: 1px solid black !important;
+    border-bottom: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
 }
 
 /*
@@ -138,14 +138,24 @@ tab.tabbrowser-tab {
 /*
 - Remove existing margin
 - Add margin at the top
-- Increase top border radius
-(Tab background and container for the elements inside)
+- Change border radius
+(Tab background and container)
 */
 vbox.tab-background,
 hbox.tab-content {
     margin: 0px !important;
     margin-top: 3px !important;
-    border-radius: 7px 7px 0px 0px !important;
+    border-radius: var(--CUSTOM-CHROME-SIZE-TABS-BORDER-RADIUS) !important;
+}
+
+/*
+- Remove border radius from the bottom corners when selected
+(Selected tab background and container)
+*/
+tab.tabbrowser-tab[selected] vbox.tab-background,
+tab.tabbrowser-tab[selected] hbox.tab-content {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
 }
 
 /*
@@ -167,7 +177,7 @@ label.tab-group-label {
 }
 
 /*
-- Change text color
+- Overwrite text color
 (Tab container for the selected tab)
 */
 tab.tabbrowser-tab[selected] * {
