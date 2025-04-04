@@ -167,11 +167,11 @@ tab.tabbrowser-tab[multiselected] vbox.tab-background {
 }
 
 /*
-- Adjust the margin to make them visible again
+- Remove the margin to make them visible again
 (Underline for the tabs inside groups)
 */
 hbox.tab-group-line {
-    margin-bottom: 2px !important;
+    margin-bottom: 0px !important;
 }
 
 /*
@@ -252,7 +252,7 @@ work to make it dynamic ¯\_(ツ)_/¯
 (Actual urlbar when it's open)
 */
 #urlbar[open] {
-    top: 40px !important;
+    top: calc(var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) + 3px) !important;
 }
 
 /*
