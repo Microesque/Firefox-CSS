@@ -1,16 +1,10 @@
 @import url(variables.css);
 
+/* ========================================================================== */
+/* ================================= GENERAL ================================ */
+/* ========================================================================== */
 :root,
 :root * {
-    /* Toolbar & Bookmarks BG */
-    --toolbar-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
-
-    /* Border below the toolbar color */
-    --chrome-content-separator-color: var(--CUSTOM-CHROME-COLOR-MAIN-BG) !important;
-
-    /* Icons color */
-    --toolbarbutton-icon-fill: white !important;
-
     /* Toolbars text color */
     --toolbar-color: var(--CUSTOM-CHROME-COLOR-TAB-TEXT) !important;
 }
@@ -22,16 +16,21 @@ browser {
     background-color: #222 !important;
 }
 
+/* ========================================================================== */
 /* ================================= CHROME ================================= */
+/* ========================================================================== */
 :root,
 :root * {
     /*
     - Opacity ratio for the tab backgrounds when FF isn't focused
     
-    - BG color of tabs container when FF is focused
-    - BG color of tabs container when FF isn't focused
-    - TX color of window buttons when FF is focused
-    - TX color of window buttons when FF isn't focused
+    - BG color of toolbars
+    
+    - BG color of title bar when FF is focused
+    - BG color of title bar when FF isn't focused
+    - BG color of chrome button icons
+    - BG color of window button icons when FF is focused
+    - BG color of window button icons when FF isn't focused
     
     - Outline color of tab
     - Outline color of selected tab
@@ -41,10 +40,13 @@ browser {
     */
     --inactive-titlebar-opacity: 1 !important;
 
-    --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBOX-BG) !important;
-    --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-TOOLBOX-BG) !important;
-    --toolbox-textcolor: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
-    --toolbox-textcolor-inactive: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
+    --toolbar-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
+
+    --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-TITLE-BG) !important;
+    --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-TITLE-BG) !important;
+    --toolbarbutton-icon-fill: var(--CUSTOM-CHROME-COLOR-ICON-BG) !important;
+    --toolbox-textcolor: var(--CUSTOM-CHROME-COLOR-ICON-BG) !important;
+    --toolbox-textcolor-inactive: var(--CUSTOM-CHROME-COLOR-ICON-BG) !important;
 
     --tab-outline-color: none !important;
     --tab-selected-outline-color: none !important;
@@ -268,7 +270,9 @@ hbox.titlebar-spacer {
     display: none !important;
 }
 
+/* ========================================================================== */
 /* ================================= URLBAR ================================= */
+/* ========================================================================== */
 :root,
 :root * {
     /*
@@ -338,7 +342,6 @@ span.urlbarView-button.urlbarView-button-menu {
 span[aria-selected='true']>span {
     font-weight: bold !important;
 }
-
 
 /*
 - Increase border radius
