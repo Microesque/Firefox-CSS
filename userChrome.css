@@ -68,9 +68,10 @@ it starts misbehaving for some reason
 (Toolsbar - everyhing above the navigation bar)
 */
 #TabsToolbar {
-    height: 37px !important;
-    min-height: 37px !important;
-    max-height: 37px !important;
+    --CUSTOM-TABS-TOOLBAR-HEIGHT: 37px;
+    height: var(--CUSTOM-TABS-TOOLBAR-HEIGHT) !important;
+    min-height: var(--CUSTOM-TABS-TOOLBAR-HEIGHT) !important;
+    max-height: var(--CUSTOM-TABS-TOOLBAR-HEIGHT) !important;
 }
 
 /*
@@ -113,14 +114,54 @@ hbox.titlebar-buttonbox>toolbarbutton {
     border: none !important;
 }
 
+/*
+- Remove close icons
+(Close icon within each tab)
+*/
+image.tab-close-button.close-icon {
+    display: none !important;
+}
 
+/*
+- Remove existing padding
+- Add custom margin between tabs
+(Highes container for a tab)
+*/
+tab.tabbrowser-tab {
+    padding: 0px !important;
+    margin: 0px var(--CUSTOM-CHROME-SIZE-TABS-GAP) !important;
+}
 
+/*
+- Remove existing margin
+- Add margin at the top
+- Increase top border radius
+(Tab background and container for the elements inside)
+*/
+vbox.tab-background,
+hbox.tab-content {
+    margin: 0px !important;
+    margin-top: 3px !important;
+    border-radius: 7px 7px 0px 0px !important;
+}
 
+/*
+- Adjust the margin to make them visible again
+(Underline for the tabs inside groups)
+*/
+hbox.tab-group-line {
+    margin-bottom: 2px !important;
+}
 
-
-
-
-
+/*
+- Stop tab group container from getting inverten when opened
+(Tab group container's label)
+*/
+label.tab-group-label {
+    background-color: var(--tab-group-color-invert) !important;
+    color: var(--tab-group-label-text-dark) !important;
+    outline: none !important;
+}
 
 /*
 - Set the height of the navigation bar
