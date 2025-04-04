@@ -2,10 +2,6 @@
 
 :root,
 :root * {
-    /* Main BG */
-    --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-MAIN-BG) !important;
-    --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-MAIN-BG) !important;
-
     /* Toolbar & Bookmarks BG */
     --toolbar-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
 
@@ -15,12 +11,205 @@
     /* Icons color */
     --toolbarbutton-icon-fill: white !important;
 
-    /* Browser buttons color */
-    --toolbox-textcolor: white !important;
-    --toolbox-textcolor-inactive: white !important;
-
     /* Toolbars text color */
     --toolbar-color: var(--CUSTOM-CHROME-COLOR-TAB-TEXT) !important;
+}
+
+/*
+- Set the background of the blank loading page
+*/
+browser {
+    background-color: #222 !important;
+}
+
+/* ================================= CHROME ================================= */
+:root,
+:root * {
+    /*
+    - Opacity ratio for the tab backgrounds when FF isn't focused
+    
+    - BG color of tabs container when FF is focused
+    - BG color of tabs container when FF isn't focused
+    - TX color of window buttons when FF is focused
+    - TX color of window buttons when FF isn't focused
+    
+    - Outline color of tab
+    - Outline color of selected tab
+    - Shadow of selected tab
+    
+    - Padding of the navbar icons (determines their size, as well as their gap)
+    */
+    --inactive-titlebar-opacity: 1 !important;
+
+    --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBOX-BG) !important;
+    --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-TOOLBOX-BG) !important;
+    --toolbox-textcolor: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
+    --toolbox-textcolor-inactive: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
+
+    --tab-outline-color: none !important;
+    --tab-selected-outline-color: none !important;
+    --tab-selected-shadow: none !important;
+
+
+    --toolbarbutton-inner-padding: 7px !important;
+}
+
+/*
+- Change the bottom border
+(Container for the whole chrome)
+*/
+#navigator-toolbox {
+    border-bottom: 1px solid black !important;
+}
+
+/*
+- Set the height value. Set current/min/max together or
+it starts misbehaving for some reason
+(Toolsbar - everyhing above the navigation bar)
+*/
+#TabsToolbar {
+    height: 37px !important;
+    min-height: 37px !important;
+    max-height: 37px !important;
+}
+
+/*
+- Remove vertical padding
+(Chrome minimize, restore, close buttons)
+*/
+hbox.titlebar-buttonbox>toolbarbutton {
+    padding: 0px 14px !important;
+}
+
+/*
+- Make it take up the entire toolsbar container
+- Add gaps from the sides
+(Toolsbar container for the tabs/buttons etc.)
+*/
+#TabsToolbar-customization-target {
+    height: 100% !important;
+    margin-inline: 8px 4px !important;
+}
+
+/*
+- Add gaps between the buttons
+(Toolsbar buttons)
+*/
+#TabsToolbar-customization-target>toolbarbutton {
+    padding: 0px 2px !important;
+}
+
+/*
+- Remove min-height
+- Make the padding match other buttons
+- Remove margin
+- Remove right border
+(Highest tabs container)
+*/
+#tabbrowser-tabs {
+    min-height: 0px !important;
+    padding-inline: 2px !important;
+    margin-inline: 0px !important;
+    border: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+- Set the height of the navigation bar
+(Navigation bar - contains urlbar, navigation icons etc.)
+*/
+#nav-bar {
+    height: 37px !important;
+}
+
+/*
+- Cover the entire container
+- Remove minimum sizes
+- Remove padding
+- Match side margin to other icons
+(Highest Urlbar container)
+*/
+#urlbar-container {
+    height: 100% !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    padding: 0px !important;
+    margin-inline: 7px !important;
+}
+
+/*
+- Set width to be the same when open/close
+- Set height to be the same when open/close
+- Remove the left margin placed only when open
+- Remove size limitations
+(Actual urlbar, including open/close. This element is always
+considered "fixed", regardless of any css properties)
+*/
+#urlbar {
+    width: var(--urlbar-width) !important;
+    margin-left: 0px !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+}
+
+/*
+- Set the height
+(Actual urlbar when it's not open)
+*/
+#urlbar:not([open]) {
+    height: 30px !important;
+}
+
+/*
+- Position to open from the same position as it is closed. Too much
+work to make it dynamic ¯\_(ツ)_/¯
+(Actual urlbar when it's open)
+*/
+#urlbar[open] {
+    top: 40px !important;
+}
+
+/*
+- Set separate background
+(Tab container for the non-selected tabs)
+*/
+vbox.tab-background:not([selected]) {
+    background: var(--CUSTOM-CHROME-COLOR-TABS-BG) !important;
+}
+
+/*
+- Set separate background
+(Tab container for the selected tab)
+*/
+vbox.tab-background[selected] {
+    background: var(--CUSTOM-CHROME-COLOR-TABS-SELECT-BG) !important;
+}
+
+/*
+- Remove the padding
+- Set width and height to be the same when open/closed
+(Urlbar container for the elements inside)
+*/
+hbox.urlbar-input-container {
+    padding: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+/*
+- Remove the space
+(Space at the very top right of chrome)
+*/
+hbox.titlebar-spacer {
+    display: none !important;
 }
 
 /* ================================= URLBAR ================================= */
