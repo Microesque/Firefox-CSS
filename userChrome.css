@@ -92,7 +92,7 @@ hbox.titlebar-buttonbox>toolbarbutton {
 */
 #TabsToolbar-customization-target {
     height: 100% !important;
-    margin-inline: 8px 4px !important;
+    margin-inline: 5px 0px !important;
 }
 
 /*
