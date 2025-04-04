@@ -25,33 +25,35 @@ browser {
     - Opacity ratio for the tab backgrounds when FF isn't focused
     
     - BG color of toolbars
-    
     - BG color of title bar when FF is focused
     - BG color of title bar when FF isn't focused
-    - BG color of chrome button icons
-    - BG color of window button icons when FF is focused
-    - BG color of window button icons when FF isn't focused
     
     - Outline color of tab
     - Outline color of selected tab
     - Shadow of selected tab
     
-    - Padding of the navbar icons (determines their size, as well as their gap)
+    - TX color of chrome button icons
+    - TX color of window button icons when FF is focused
+    - TX color of window button icons when FF isn't focused
+    
+    - BG color of chrome buttons when hovering
+    - Padding of the chrome buttons (determines their size, as well as their gap)
     */
     --inactive-titlebar-opacity: 1 !important;
 
     --toolbar-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
-
     --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-TITLE-BG) !important;
     --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-TITLE-BG) !important;
-    --toolbarbutton-icon-fill: var(--CUSTOM-CHROME-COLOR-ICON-BG) !important;
-    --toolbox-textcolor: var(--CUSTOM-CHROME-COLOR-ICON-BG) !important;
-    --toolbox-textcolor-inactive: var(--CUSTOM-CHROME-COLOR-ICON-BG) !important;
 
     --tab-outline-color: none !important;
     --tab-selected-outline-color: none !important;
     --tab-selected-shadow: none !important;
 
+    --toolbarbutton-icon-fill: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
+    --toolbox-textcolor: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
+    --toolbox-textcolor-inactive: var(--CUSTOM-CHROME-COLOR-ICON-TEXT) !important;
+
+    --toolbarbutton-hover-background: var(--CUSTOM-CHROME-COLOR-ICON-HOVER-BG) !important;
     --toolbarbutton-inner-padding: 7px !important;
 }
 
