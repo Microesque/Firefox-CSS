@@ -71,10 +71,9 @@ it starts misbehaving for some reason
 (Toolsbar - everyhing above the navigation bar)
 */
 #TabsToolbar {
-    --CUSTOM-TABS-TOOLBAR-HEIGHT: 37px;
-    height: var(--CUSTOM-TABS-TOOLBAR-HEIGHT) !important;
-    min-height: var(--CUSTOM-TABS-TOOLBAR-HEIGHT) !important;
-    max-height: var(--CUSTOM-TABS-TOOLBAR-HEIGHT) !important;
+    height: var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) !important;
+    min-height: var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) !important;
+    max-height: var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) !important;
 }
 
 /*
@@ -136,12 +135,15 @@ tab.tabbrowser-tab {
 }
 
 /*
+- Make height fill the container
 - Remove existing margin
 - Change border radius
 (Tab background and container)
 */
 vbox.tab-background,
 hbox.tab-content {
+    height: 100% !important;
+    min-height: 100% !important;
     margin: 0px !important;
     border-radius: var(--CUSTOM-CHROME-SIZE-TABS-BORDER-RADIUS) !important;
 }
