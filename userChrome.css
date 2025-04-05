@@ -412,3 +412,74 @@ span.urlbarView-type-icon {
 div.urlbarView-body-inner {
     border: none !important;
 }
+
+/* ========================================================================== */
+/* ================================= CONTEXT ================================ */
+/* ========================================================================== */
+/*
+- Style through variables
+(Context menu containers)
+*/
+.menupopup-arrowscrollbox {
+    background: var(--CUSTOM-CHROME-COLOR-CONTEXT-BG) !important;
+    box-shadow: var(--CUSTOM-CHROME-BOXSHADOW-CONTEXT) !important;
+    border: var(--CUSTOM-CHROME-BORDER-CONTEXT) !important;
+    border-radius: var(--CUSTOM-CHROME-SIZE-CONTEXT-BORDER-RADIUS) !important;
+    padding: var(--CUSTOM-CHROME-PADDING-CONTEX) !important;
+}
+
+/*
+- Style through variables
+(Context menu items)
+*/
+menupopup menuitem,
+menupopup menu {
+    background: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-BG) !important;
+    color: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-TEXT) !important;
+    border-radius: var(--CUSTOM-CHROME-SIZE-CONTEXT-ITEM-BORDER-RADIUS) !important;
+    padding: var(--CUSTOM-CHROME-PADDING-CONTEXT-ITEM) !important;
+}
+
+/*
+- Style bg and text through variables
+(Context menu items when hovering)
+*/
+menupopup menuitem[_moz-menuactive],
+menupopup menu[_moz-menuactive] {
+    background: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-HOVER-BG) !important;
+    color: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-HOVER-TEXT) !important;
+}
+
+/*
+- Style bg and text through variables
+(Shortcut text that appars when hovering over context menu items)
+*/
+menupopup menuitem[_moz-menuactive] .menu-accel-container *,
+menupopup menu[_moz-menuactive] .menu-accel-container * {
+    color: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-SHORTCUT-TEXT) !important;
+}
+
+/*
+- Change the padding
+(Context menu seperator containers)
+*/
+menupopup menuseparator {
+    padding: 5px !important;
+}
+
+/*
+- Change the color
+(Context menu seperators)
+*/
+menupopup menuseparator:before {
+    border-top: 1px solid var(--CUSTOM-CHROME-COLOR-CONTEXT-SEPERATOR) !important;
+}
+
+/*
+- Remove them
+(Context menu icon buttons and the first seperator)
+*/
+#context-navigation .menuitem-iconic,
+#context-sep-navigation {
+    display: none !important;
+}
