@@ -483,3 +483,45 @@ menupopup menuseparator:before {
 #context-sep-navigation {
     display: none !important;
 }
+
+/* ========================================================================== */
+/* =============================== AUTOSCROLL =============================== */
+/* ========================================================================== */
+/*
+- Make shadow elements invisible through variables, make treat this container
+as the icon instead
+- Style through variables
+(Autoscroller icon container)
+*/
+.autoscroller {
+    --panel-background: transparent !important;
+    --panel-border-color: none !important;
+    --panel-shadow: none !important;
+
+    height: var(--CUSTOM-CHROME-SIZE-AUTOSCROLL) !important;
+    width: var(--CUSTOM-CHROME-SIZE-AUTOSCROLL) !important;
+    border-radius: var(--CUSTOM-CHROME-SIZE-AUTOSCROLL-BORDER-RADIUS) !important;
+    background-color: var(--CUSTOM-CHROME-COLOR-AUTOSCROLL-BG) !important;
+    background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border: var(--CUSTOM-CHROME-BORDER-AUTOSCROLL) !important;
+    box-shadow: var(--CUSTOM-CHROME-BOXSHADOW-AUTOSCROLL) !important;
+}
+
+/*
+- Use a different image
+(Autoscroller icon container when scrolling vertical only)
+*/
+.autoscroller[scrolldir="NS"] {
+    background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-V) !important;
+}
+
+
+/*
+- Use a different image
+(Autoscroller icon container when scrolling horizontal only)
+*/
+.autoscroller[scrolldir="EW"] {
+    background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-H) !important;
+}

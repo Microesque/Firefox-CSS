@@ -43,6 +43,16 @@
     --CUSTOM-CHROME-BORDER-CONTEXT: 1px solid black;
     --CUSTOM-CHROME-BOXSHADOW-CONTEXT: 2px 2px 3px rgb(0, 0, 0, 0.4);
 
+    /* Chrome - Autoscroll */
+    --CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE: url('./images/autoscroll.svg');
+    --CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-H: url('./images/autoscrollHorizontal.svg');
+    --CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-V: url('./images/autoscrollVertical.svg');
+    --CUSTOM-CHROME-COLOR-AUTOSCROLL-BG: #5e5e5e;
+    --CUSTOM-CHROME-SIZE-AUTOSCROLL: 30px;
+    --CUSTOM-CHROME-SIZE-AUTOSCROLL-BORDER-RADIUS: 100%;
+    --CUSTOM-CHROME-BORDER-AUTOSCROLL: 1px solid black;
+    --CUSTOM-CHROME-BOXSHADOW-AUTOSCROLL: 0px 0px 3px rgba(0, 0, 0, 0.4);
+
     /* Content - Newtab */
     --CUSTOM-NEWTAB-URL-BGIMAGE: url('./images/NewtabBackground.png');
     --CUSTOM-NEWTAB-COLOR-FALLBACK-BG1: var(--CUSTOM-CHROME-COLOR-MAIN-BG);
