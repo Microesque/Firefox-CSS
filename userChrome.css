@@ -474,12 +474,14 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 - Force the element to be block type; otherwise, FF ignores the flex-direction
 - Update overflow to make the overflowing bookmarks scrollable without
 - Make the scroll itself invisible
+- Remove color scheme (makes icons change based on light-dark mode otherwise)
 (Bookmark list container)
 */
 #PersonalToolbar #PlacesToolbarItems {
     display: block !important;
     overflow: auto;
     scrollbar-width: none !important;
+    color-scheme: none !important;
 }
 
 /*
@@ -522,7 +524,7 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 */
 #PersonalToolbar #PlacesToolbarItems toolbarseparator::before {
     border-inline-start: none !important;
-    margin-block: 5px !important;
+    margin: var(--CUSTOM-CHROME-MARGIN-TOOLBAR-SEPERATOR) !important;
     width: 100% !important;
     height: 1px !important;
     background: var(--toolbarbutton-icon-fill) !important;
@@ -535,6 +537,14 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 #browser {
     margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
     border-left: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
+}
+
+/*
+- Make the empty area behind the toolbar the same as toolbar color (for when
+the toolbar is made invisible with ctrl+shift+b)
+*/
+html {
+    background: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
 }
 
 /* ========================================================================== */

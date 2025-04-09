@@ -30,7 +30,8 @@
 
     /* Chrome - Toolbar */
     --CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH: 30px;
-    --CUSTOM-CHROME-MARGIN-TOOLBAR-ICON: 1px 0px;
+    --CUSTOM-CHROME-MARGIN-TOOLBAR-ICON: 3px 0px;
+    --CUSTOM-CHROME-MARGIN-TOOLBAR-SEPERATOR: 5px 3px;
 
     /* Chrome - Context Menus */
     --CUSTOM-CHROME-COLOR-CONTEXT-BG: #2e2e2e;
