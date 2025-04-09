@@ -410,7 +410,7 @@ span.urlbarView-type-icon {
 (Urlbar dropdown menu container)
 */
 div.urlbarView-body-inner {
-    border: visible !important;
+    border: 0px !important;
 }
 
 /* ========================================================================== */
