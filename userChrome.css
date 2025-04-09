@@ -532,9 +532,9 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 
 /*
 - Push right the same amount as the toolbar width
-(Highest container for the browser page)
+(Highest container for the browser page only when not in full screen!)
 */
-#browser {
+html:not([inFullscreen='true']) #browser {
     margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
     border-left: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
 }
