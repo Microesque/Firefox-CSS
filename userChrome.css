@@ -410,7 +410,131 @@ span.urlbarView-type-icon {
 (Urlbar dropdown menu container)
 */
 div.urlbarView-body-inner {
-    border: none !important;
+    border: visible !important;
+}
+
+/* ========================================================================== */
+/* ================================= TOOLBAR ================================ */
+/* ========================================================================== */
+/*
+- Increase z to make toolbar visible over the browser page
+(Container to all chrome elements - title, navbar, toolbar...)
+*/
+#navigator-toolbox {
+    z-index: 999 !important;
+}
+
+/*
+- Position the container on the left side; match the top to navbar, and bottom
+to the browser edge
+- Match the navbar border
+- Position elements as a column
+- Set width
+(Highest toolbar container)
+*/
+#PersonalToolbar {
+    position: fixed !important;
+    top: calc(var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) + 37px) !important;
+    min-height: 0px !important;
+    height: calc(100vh - var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) - 37px) !important;
+    max-height: calc(100vh - var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) - 37px) !important;
+    border-top: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
+    flex-direction: column !important;
+    width: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
+}
+
+/*
+- Remove the existing min sizes
+(Highest bookmark list container)
+*/
+#PersonalToolbar #personal-bookmarks {
+    min-height: 0px !important;
+    min-width: 0px !important;
+}
+
+/*
+- Position elements as a column
+(Bookmark list container)
+*/
+#PersonalToolbar #PlacesToolbar {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/*
+- Remove the chevron button (It doesn't act rigth since it triggers
+with width overflow. Even when it is made visible with tricks,
+it shows an empty box. I made bookmarks scrollable anyways.)
+*/
+#PersonalToolbar #PlacesChevron {
+    display: none !important;
+}
+
+/*
+- Force the element to be block type; otherwise, FF ignores the flex-direction
+- Update overflow to make the overflowing bookmarks scrollable without
+- Make the scroll itself invisible
+(Bookmark list container)
+*/
+#PersonalToolbar #PlacesToolbarItems {
+    display: block !important;
+    overflow: auto;
+    scrollbar-width: none !important;
+}
+
+/*
+- Remove existing padding
+- Set custom margin
+(Container for all toolbal buttons including bookmark icons)
+*/
+#PersonalToolbar toolbarbutton {
+    padding: 0px !important;
+    margin: var(--CUSTOM-CHROME-MARGIN-TOOLBAR-ICON) !important;
+}
+
+/*
+- Remove the existing margin
+- Match size and padding to other toolbar icons
+(Bookmark list item icons)
+*/
+#PersonalToolbar #PlacesToolbarItems .toolbarbutton-icon {
+    margin: 0px !important;
+    width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+    height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+    padding: var(--toolbarbutton-inner-padding) !important;
+}
+
+/*
+- Remove all text
+(Bookmark list item labels)
+*/
+#PersonalToolbar #PlacesToolbarItems .toolbarbutton-text {
+    display: none !important;
+}
+
+/*
+- Remove the existing border
+- Add slight margin to make it selectable
+- Expand the entire width
+- Height of one pixel (use background instead of borders)
+- Set to the same color as other icons
+(Bookmark list item seperators)
+*/
+#PersonalToolbar #PlacesToolbarItems toolbarseparator::before {
+    border-inline-start: none !important;
+    margin-block: 5px !important;
+    width: 100% !important;
+    height: 1px !important;
+    background: var(--toolbarbutton-icon-fill) !important;
+}
+
+/*
+- Push right the same amount as the toolbar width
+(Highest container for the browser page)
+*/
+#browser {
+    margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
+    border-left: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
 }
 
 /* ========================================================================== */
