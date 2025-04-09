@@ -62,7 +62,7 @@ browser {
 (Container for the whole chrome)
 */
 #navigator-toolbox {
-    border-bottom: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
+    border-bottom: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
 }
 
 /*
@@ -438,7 +438,7 @@ to the browser edge
     min-height: 0px !important;
     height: calc(100vh - var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) - 37px) !important;
     max-height: calc(100vh - var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) - 37px) !important;
-    border-top: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
+    border-top: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
     flex-direction: column !important;
     width: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
 }
@@ -536,7 +536,7 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 */
 #browser {
     margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
-    border-left: 1px solid var(--CUSTOM-CHROME-COLOR-TOOLBAR-BORDER-BOTTOM) !important;
+    border-left: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
 }
 
 /*
@@ -650,7 +650,6 @@ as the icon instead
 .autoscroller[scrolldir="NS"] {
     background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-V) !important;
 }
-
 
 /*
 - Use a different image
