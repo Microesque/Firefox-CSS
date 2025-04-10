@@ -430,6 +430,7 @@ to the browser edge
 - Match the navbar border
 - Position elements as a column
 - Set width
+- Remove the existing transition
 (Highest toolbar container)
 */
 #PersonalToolbar {
@@ -441,6 +442,7 @@ to the browser edge
     border-top: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
     flex-direction: column !important;
     width: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
+    transition: none !important;
 }
 
 /*
@@ -531,20 +533,31 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 }
 
 /*
-- Push right the same amount as the toolbar width
-(Highest container for the browser page only when not in full screen!)
-*/
-html:not([inFullscreen='true']) #browser {
-    margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
-    border-left: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
-}
-
-/*
 - Make the empty area behind the toolbar the same as toolbar color (for when
 the toolbar is made invisible with ctrl+shift+b)
 */
 html {
     background: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
+}
+
+/*
+- Push the browser right the same amount as the toolbar width
+(Highest container for the browser page)
+*/
+#browser {
+    margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
+    border-left: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
+}
+
+/*
+Remove the previous browser margin and the border if:
+    - The toolbar is hidden
+    - The browser is in fullscreen
+*/
+html:has(#PersonalToolbar[collapsed='true']) #browser,
+html[inFullscreen='true'] #browser {
+    --CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH: 0px !important;
+    --CUSTOM-CHROME-BORDER-TOOLBAR-EDGE: none !important;
 }
 
 /* ========================================================================== */
