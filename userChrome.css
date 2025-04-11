@@ -635,7 +635,7 @@ menupopup menuseparator:before {
 /* =============================== AUTOSCROLL =============================== */
 /* ========================================================================== */
 /*
-- Make shadow elements invisible through variables, make treat this container
+- Make shadow element invisible through variables, treat this container
 as the icon instead
 - Style through variables
 (Autoscroller icon container)
@@ -645,15 +645,15 @@ as the icon instead
     --panel-border-color: none !important;
     --panel-shadow: none !important;
 
-    height: var(--CUSTOM-CHROME-SIZE-AUTOSCROLL) !important;
-    width: var(--CUSTOM-CHROME-SIZE-AUTOSCROLL) !important;
-    border-radius: var(--CUSTOM-CHROME-SIZE-AUTOSCROLL-BORDER-RADIUS) !important;
-    background-color: var(--CUSTOM-CHROME-COLOR-AUTOSCROLL-BG) !important;
-    background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE) !important;
+    height: var(--CHROME-AUTOSCROLL-SIZE) !important;
+    width: var(--CHROME-AUTOSCROLL-SIZE) !important;
+    border-radius: var(--CHROME-AUTOSCROLL-RADIUS) !important;
+    background-color: var(--CHROME-AUTOSCROLL-BG-COLOR) !important;
+    background-image: var(--CHROME-AUTOSCROLL-IMAGE-DEFAULT) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-    border: var(--CUSTOM-CHROME-BORDER-AUTOSCROLL) !important;
-    box-shadow: var(--CUSTOM-CHROME-BOXSHADOW-AUTOSCROLL) !important;
+    border: var(--CHROME-AUTOSCROLL-BORDER) !important;
+    box-shadow: var(--CHROME-AUTOSCROLL-BOX-SHADOW) !important;
 }
 
 /*
@@ -661,7 +661,7 @@ as the icon instead
 (Autoscroller icon container when scrolling vertical only)
 */
 .autoscroller[scrolldir="NS"] {
-    background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-V) !important;
+    background-image: var(--CHROME-AUTOSCROLL-IMAGE-VERTICAL) !important;
 }
 
 /*
@@ -669,5 +669,5 @@ as the icon instead
 (Autoscroller icon container when scrolling horizontal only)
 */
 .autoscroller[scrolldir="EW"] {
-    background-image: var(--CUSTOM-CHROME-URL-AUTOSCROLL-IMAGE-H) !important;
+    background-image: var(--CHROME-AUTOSCROLL-IMAGE-HORIZONTAL) !important;
 }
