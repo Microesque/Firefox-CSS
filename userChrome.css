@@ -41,7 +41,7 @@ browser {
     */
     --inactive-titlebar-opacity: 1 !important;
 
-    --toolbar-bgcolor: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
+    --toolbar-bgcolor: var(--CHROME-TOOLBAR-BG) !important;
     --toolbox-bgcolor: var(--CUSTOM-CHROME-COLOR-TITLE-BG) !important;
     --toolbox-bgcolor-inactive: var(--CUSTOM-CHROME-COLOR-TITLE-BG) !important;
 
@@ -62,7 +62,7 @@ browser {
 (Container for the whole chrome)
 */
 #navigator-toolbox {
-    border-bottom: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
+    border-bottom: var(--CHROME-TOOLBAR-EDGE-BORDER) !important;
 }
 
 /*
@@ -439,9 +439,9 @@ to the browser edge
     min-height: 0px !important;
     height: calc(100vh - var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) - 37px) !important;
     max-height: calc(100vh - var(--CUSTOM-CHROME-SIZE-TITLE-HEIGHT) - 37px) !important;
-    border-top: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
+    border-top: var(--CHROME-TOOLBAR-EDGE-BORDER) !important;
     flex-direction: column !important;
-    width: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
+    width: var(--CHROME-TOOLBAR-WIDTH) !important;
     transition: none !important;
 }
 
@@ -493,7 +493,7 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 */
 #PersonalToolbar toolbarbutton {
     padding: 0px !important;
-    margin: var(--CUSTOM-CHROME-MARGIN-TOOLBAR-ICON) !important;
+    margin: var(--CHROME-TOOLBAR-ICON-MARGIN) !important;
 }
 
 /*
@@ -526,7 +526,7 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 */
 #PersonalToolbar #PlacesToolbarItems toolbarseparator::before {
     border-inline-start: none !important;
-    margin: var(--CUSTOM-CHROME-MARGIN-TOOLBAR-SEPERATOR) !important;
+    margin: var(--CHROME-TOOLBAR-SEPARATOR-MARGIN) !important;
     width: 100% !important;
     height: 1px !important;
     background: var(--toolbarbutton-icon-fill) !important;
@@ -537,7 +537,7 @@ it shows an empty box. I made bookmarks scrollable anyways.)
 the toolbar is made invisible with ctrl+shift+b)
 */
 html {
-    background: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG) !important;
+    background: var(--CHROME-TOOLBAR-BG) !important;
 }
 
 /*
@@ -545,8 +545,8 @@ html {
 (Highest container for the browser page)
 */
 #browser {
-    margin-left: var(--CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH) !important;
-    border-left: var(--CUSTOM-CHROME-BORDER-TOOLBAR-EDGE) !important;
+    margin-left: var(--CHROME-TOOLBAR-WIDTH) !important;
+    border-left: var(--CHROME-TOOLBAR-EDGE-BORDER) !important;
 }
 
 /*
@@ -556,8 +556,8 @@ Remove the previous browser margin and the border if:
 */
 html:has(#PersonalToolbar[collapsed='true']) #browser,
 html[inFullscreen='true'] #browser {
-    --CUSTOM-CHROME-SIZE-TOOLBAR-WIDTH: 0px !important;
-    --CUSTOM-CHROME-BORDER-TOOLBAR-EDGE: none !important;
+    --CHROME-TOOLBAR-WIDTH: 0px !important;
+    --CHROME-TOOLBAR-EDGE-BORDER: none !important;
 }
 
 /* ========================================================================== */
