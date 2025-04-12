@@ -568,11 +568,11 @@ html[inFullscreen='true'] #browser {
 (Context menu containers)
 */
 .menupopup-arrowscrollbox {
-    background: var(--CUSTOM-CHROME-COLOR-CONTEXT-BG) !important;
-    box-shadow: var(--CUSTOM-CHROME-BOXSHADOW-CONTEXT) !important;
-    border: var(--CUSTOM-CHROME-BORDER-CONTEXT) !important;
-    border-radius: var(--CUSTOM-CHROME-SIZE-CONTEXT-BORDER-RADIUS) !important;
-    padding: var(--CUSTOM-CHROME-PADDING-CONTEX) !important;
+    background: var(--CHROME-CONTEXT-BG-COLOR) !important;
+    box-shadow: var(--CHROME-CONTEXT-BOX-SHADOW) !important;
+    border: var(--CHROME-CONTEXT-BORDER) !important;
+    border-radius: var(--CHROME-CONTEXT-BORDER-RADIUS) !important;
+    padding: var(--CHROME-CONTEXT-PADDING) !important;
 }
 
 /*
@@ -581,10 +581,10 @@ html[inFullscreen='true'] #browser {
 */
 menupopup menuitem,
 menupopup menu {
-    background: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-BG) !important;
-    color: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-TEXT) !important;
-    border-radius: var(--CUSTOM-CHROME-SIZE-CONTEXT-ITEM-BORDER-RADIUS) !important;
-    padding: var(--CUSTOM-CHROME-PADDING-CONTEXT-ITEM) !important;
+    background: var(--CHROME-CONTEXT-ITEM-BG-COLOR) !important;
+    color: var(--CHROME-CONTEXT-ITEM-TEXT-COLOR) !important;
+    border-radius: var(--CHROME-CONTEXT-ITEM-BORDER-RADIUS) !important;
+    padding: var(--CHROME-CONTEXT-ITEM-PADDING) !important;
 }
 
 /*
@@ -593,8 +593,8 @@ menupopup menu {
 */
 menupopup menuitem[_moz-menuactive],
 menupopup menu[_moz-menuactive] {
-    background: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-HOVER-BG) !important;
-    color: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-HOVER-TEXT) !important;
+    background: var(--CHROME-CONTEXT-ITEM-HOVER-BG-COLOR) !important;
+    color: var(--CHROME-CONTEXT-ITEM-HOVER-TEXT-COLOR) !important;
 }
 
 /*
@@ -603,7 +603,7 @@ menupopup menu[_moz-menuactive] {
 */
 menupopup menuitem[_moz-menuactive] .menu-accel-container *,
 menupopup menu[_moz-menuactive] .menu-accel-container * {
-    color: var(--CUSTOM-CHROME-COLOR-CONTEXT-ITEM-SHORTCUT-TEXT) !important;
+    color: var(--CHROME-CONTEXT-ITEM-SHORTCUT-TEXT-COLOR) !important;
 }
 
 /*
@@ -611,7 +611,7 @@ menupopup menu[_moz-menuactive] .menu-accel-container * {
 (Context menu seperator containers)
 */
 menupopup menuseparator {
-    padding: 5px !important;
+    padding: var(--CHROME-CONTEXT-SEPARATOR-PADDING) !important;
 }
 
 /*
@@ -619,7 +619,7 @@ menupopup menuseparator {
 (Context menu seperators)
 */
 menupopup menuseparator:before {
-    border-top: 1px solid var(--CUSTOM-CHROME-COLOR-CONTEXT-SEPERATOR) !important;
+    border-top: 1px solid var(--CHROME-CONTEXT-SEPARATOR-COLOR) !important;
 }
 
 /*
