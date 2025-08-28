@@ -123,9 +123,7 @@
     - Add background image with gradient fallback
     */
     body {
-        background:
-            var(--CUSTOM-NEWTAB-URL-BGIMAGE),
-            radial-gradient(ellipse, var(--CUSTOM-NEWTAB-COLOR-FALLBACK-BG1) 20%, var(--CUSTOM-NEWTAB-COLOR-FALLBACK-BG2)) !important;
+        background: var(--CUSTOM-NEWTAB-URL-BGIMAGE) !important;
         background-size: cover !important;
         background-repeat: no-repeat !important;
         background-attachment: fixed !important;
