@@ -563,9 +563,18 @@ html[inFullscreen='true'] #browser {
 /* ========================================================================== */
 /* ================================= CONTEXT ================================ */
 /* ========================================================================== */
+
+/*
+- Remove the background (setting background to transparent isn't enough)
+(Biggest container for all context menus)
+*/
+menupopup {
+    -moz-appearance: none !important;
+}
+
 /*
 - Style through variables
-(Context menu containers)
+(Class for the inner container of all context menus)
 */
 .menupopup-arrowscrollbox {
     background: var(--CHROME-CONTEXT-BG-COLOR) !important;
