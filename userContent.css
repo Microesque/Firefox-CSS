@@ -139,10 +139,9 @@
     }
 
     /*
-    - Remove evertything except shortcuts
+    - Remove everything except shortcuts
     */
-    div.non-collapsible-section,
-    div.body-wrapper.on>div:nth-child(2) {
+    div.non-collapsible-section {
         display: none !important;
     }
 
