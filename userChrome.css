@@ -7,6 +7,9 @@
 :root * {
     /* Toolbars text color */
     --toolbar-color: var(--CUSTOM-CHROME-COLOR-TAB-TEXT) !important;
+    
+    /* Force darkmode on all icons */
+    color-scheme: dark !important;
 }
 
 /*
