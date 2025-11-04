@@ -577,7 +577,7 @@ menupopup {
 
 /*
 - Style through variables
-(Class for the inner container of all context menus)
+(Class for the inner container of all context menus, inside a shadowroot under menupopup element)
 */
 .menupopup-arrowscrollbox {
     background: var(--CHROME-CONTEXT-BG-COLOR) !important;
@@ -638,8 +638,8 @@ menupopup menuseparator:before {
 - Remove them
 (Context menu icon buttons and the first seperator)
 */
-#context-navigation .menuitem-iconic,
-#context-sep-navigation {
+menupopup #context-navigation .menuitem-iconic,
+menupopup #context-sep-navigation {
     display: none !important;
 }
 
