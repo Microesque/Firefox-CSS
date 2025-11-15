@@ -1,4 +1,4 @@
-@import "style.css";
+@import "./style.css";
 
 /* ---------------------------- General ---------------------------- */
 @-moz-document url-prefix(about:) {
