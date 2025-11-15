@@ -1,0 +1,77 @@
+@import "../style.css";
+
+/*
+- Remove the background (setting background to transparent isn't enough)
+(Biggest container for all context menus)
+*/
+menupopup {
+    -moz-appearance: none !important;
+}
+
+/*
+- Style through variables
+(Class for the inner container of all context menus, inside a shadowroot under menupopup element)
+*/
+.menupopup-arrowscrollbox {
+    background: var(--CHROME-CONTEXT-BG-COLOR) !important;
+    box-shadow: var(--CHROME-CONTEXT-BOX-SHADOW) !important;
+    border: var(--CHROME-CONTEXT-BORDER) !important;
+    border-radius: var(--CHROME-CONTEXT-BORDER-RADIUS) !important;
+    padding: var(--CHROME-CONTEXT-PADDING) !important;
+}
+
+/*
+- Style through variables
+(Context menu items)
+*/
+menupopup menuitem,
+menupopup menu {
+    background: var(--CHROME-CONTEXT-ITEM-BG-COLOR) !important;
+    color: var(--CHROME-CONTEXT-ITEM-TEXT-COLOR) !important;
+    border-radius: var(--CHROME-CONTEXT-ITEM-BORDER-RADIUS) !important;
+    padding: var(--CHROME-CONTEXT-ITEM-PADDING) !important;
+}
+
+/*
+- Style bg and text through variables
+(Context menu items when hovering)
+*/
+menupopup menuitem[_moz-menuactive],
+menupopup menu[_moz-menuactive] {
+    background: var(--CHROME-CONTEXT-ITEM-HOVER-BG-COLOR) !important;
+    color: var(--CHROME-CONTEXT-ITEM-HOVER-TEXT-COLOR) !important;
+}
+
+/*
+- Style bg and text through variables
+(Shortcut text that appars when hovering over context menu items)
+*/
+menupopup menuitem[_moz-menuactive] .menu-accel-container *,
+menupopup menu[_moz-menuactive] .menu-accel-container * {
+    color: var(--CHROME-CONTEXT-ITEM-SHORTCUT-TEXT-COLOR) !important;
+}
+
+/*
+- Change the padding
+(Context menu seperator containers)
+*/
+menupopup menuseparator {
+    padding: var(--CHROME-CONTEXT-SEPARATOR-PADDING) !important;
+}
+
+/*
+- Change the color
+(Context menu seperators)
+*/
+menupopup menuseparator:before {
+    border-top: 1px solid var(--CHROME-CONTEXT-SEPARATOR-COLOR) !important;
+}
+
+/*
+- Remove them
+(Context menu icon buttons and the first seperator)
+*/
+menupopup #context-navigation .menuitem-iconic,
+menupopup #context-sep-navigation {
+    display: none !important;
+}
