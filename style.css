@@ -53,16 +53,16 @@
 
     /* Chrome - Autoscroll */
     --CHROME-AUTOSCROLL-BG-COLOR: #5e5e5e;
-    --CHROME-AUTOSCROLL-IMAGE-DEFAULT: url('./images/autoscroll.svg');
-    --CHROME-AUTOSCROLL-IMAGE-HORIZONTAL: url('./images/autoscrollHorizontal.svg');
-    --CHROME-AUTOSCROLL-IMAGE-VERTICAL: url('./images/autoscrollVertical.svg');
+    --CHROME-AUTOSCROLL-IMAGE-DEFAULT: url('./userChrome/assets/autoscroll.svg');
+    --CHROME-AUTOSCROLL-IMAGE-HORIZONTAL: url('./userChrome/assets/autoscrollHorizontal.svg');
+    --CHROME-AUTOSCROLL-IMAGE-VERTICAL: url('./userChrome/assets/autoscrollVertical.svg');
     --CHROME-AUTOSCROLL-SIZE: 28px;
     --CHROME-AUTOSCROLL-RADIUS: 100%;
     --CHROME-AUTOSCROLL-BORDER: 1px solid black;
     --CHROME-AUTOSCROLL-BOX-SHADOW: 0px 0px 3px rgba(0, 0, 0, 0.4);
 
     /* Content - Newtab */
-    --CUSTOM-NEWTAB-URL-BGIMAGE: url('./images/NewtabBackground.png');
+    --CUSTOM-NEWTAB-URL-BGIMAGE: url('./userContent/assets/NewtabBackground.png');
     --CUSTOM-NEWTAB-COLOR-FALLBACK-BG1: var(--CUSTOM-CHROME-COLOR-MAIN-BG);
     --CUSTOM-NEWTAB-COLOR-FALLBACK-BG2: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG);
     --CUSTOM-NEWTAB-COLOR-SHORTS-BG: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG);
