@@ -1,10 +1,7 @@
+/* ========================================================================== */
+/* ================================= CHROME ================================= */
+/* ========================================================================== */
 :root {
-    /* To be refactored */
-    --CUSTOM-CHROME-COLOR-MAIN-BG: #4D4D4D;
-    --CUSTOM-CHROME-COLOR-SEARCHBAR-BG: #131313;
-    --CUSTOM-CHROME-COLOR-TAB-TEXT: #FFF;
-    --CUSTOM-CHROME-COLOR-TOOLBAR-BG: #222222;
-
     /* Chrome */
     --CUSTOM-CHROME-COLOR-TITLE-BG: #494949;
     --CUSTOM-CHROME-COLOR-ICON-TEXT: #FFF;
@@ -60,9 +57,20 @@
     --CHROME-AUTOSCROLL-RADIUS: 100%;
     --CHROME-AUTOSCROLL-BORDER: 1px solid black;
     --CHROME-AUTOSCROLL-BOX-SHADOW: 0px 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================================================== */
+/* ================================= CONTENT ================================ */
+/* ========================================================================== */
+:root {
+    /* To be refactored */
+    --CUSTOM-CHROME-COLOR-MAIN-BG: #4D4D4D;
+    --CUSTOM-CHROME-COLOR-SEARCHBAR-BG: #131313;
+    --CUSTOM-CHROME-COLOR-TAB-TEXT: #FFF;
+    --CUSTOM-CHROME-COLOR-TOOLBAR-BG: #222222;
 
     /* Content - Newtab */
-    --CUSTOM-NEWTAB-URL-BGIMAGE: url('./userContent/assets/newtabBackground.png');
+    --CUSTOM-NEWTAB-URL-BGIMAGE: url('./userContent/assets/NewtabBackground.png');
     --CUSTOM-NEWTAB-COLOR-FALLBACK-BG1: var(--CUSTOM-CHROME-COLOR-MAIN-BG);
     --CUSTOM-NEWTAB-COLOR-FALLBACK-BG2: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG);
     --CUSTOM-NEWTAB-COLOR-SHORTS-BG: var(--CUSTOM-CHROME-COLOR-TOOLBAR-BG);
