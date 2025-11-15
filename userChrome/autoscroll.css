@@ -1,0 +1,39 @@
+@import "../style.css";
+
+/*
+- Make shadow element invisible through variables, treat this container
+as the icon instead
+- Style through variables
+(Autoscroller icon container)
+*/
+.autoscroller {
+    --panel-background: transparent !important;
+    --panel-border-color: none !important;
+    --panel-shadow: none !important;
+
+    height: var(--CHROME-AUTOSCROLL-SIZE) !important;
+    width: var(--CHROME-AUTOSCROLL-SIZE) !important;
+    border-radius: var(--CHROME-AUTOSCROLL-RADIUS) !important;
+    background-color: var(--CHROME-AUTOSCROLL-BG-COLOR) !important;
+    background-image: var(--CHROME-AUTOSCROLL-IMAGE-DEFAULT) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border: var(--CHROME-AUTOSCROLL-BORDER) !important;
+    box-shadow: var(--CHROME-AUTOSCROLL-BOX-SHADOW) !important;
+}
+
+/*
+- Use a different image
+(Autoscroller icon container when scrolling vertical only)
+*/
+.autoscroller[scrolldir="NS"] {
+    background-image: var(--CHROME-AUTOSCROLL-IMAGE-VERTICAL) !important;
+}
+
+/*
+- Use a different image
+(Autoscroller icon container when scrolling horizontal only)
+*/
+.autoscroller[scrolldir="EW"] {
+    background-image: var(--CHROME-AUTOSCROLL-IMAGE-HORIZONTAL) !important;
+}
