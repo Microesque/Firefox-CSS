@@ -1,7 +1,7 @@
 # Firefox-CSS - Microesque
 Custom Firefox CSS I made for myself. Feel free to use or modify it ¯\\_(ツ)_/¯
 
-I've stopped updating for now since it's good enough for me. However, it’s still a work in progress, and I’ll get back to it eventually.
+Currently under update. Download/clone the [pre-refactor](https://github.com/Microesque/Firefox-CSS/releases/tag/pre-refactor) release to get the results below.
 
 **`Preview:`**
 <div style="text-align: left;">
